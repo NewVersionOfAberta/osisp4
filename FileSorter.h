@@ -6,7 +6,7 @@
 class FileSorter
 {
 	public:
-		FileSorter(unsigned int threadCount) : m_threadPool(threadCount, threadCount) {}
+		FileSorter(unsigned int threadCount) : m_threadPool(0, threadCount) {}
 		void SortFileData(const std::string& inputFileName, const std::string& outputFileName);
 	private:
 		void SortString(std::vector<std::string>& str);
